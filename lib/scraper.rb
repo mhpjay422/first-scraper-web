@@ -17,6 +17,7 @@ attr_accessor :parse_page, :item_container, :names
     @item_container.css(".product-card__link-overlay").map {|product| product.text}.compact
   end
 
-  
-  
+  def product_prices 
+    @item_container.css(".product-price").map {|product| product.text}.compact
+  end  
 end
